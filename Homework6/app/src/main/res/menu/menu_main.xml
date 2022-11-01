@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/horoscopeContainerFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="Main" />
+    <item
+        android:id="@+id/infoFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_info"
+        android:title="Info" />
+    <item
+        android:id="@+id/newsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_news"
+        android:title="News" />
+    <item
+        android:id="@+id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person"
+        android:title="Profile" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings"
+        android:title="Settings" />
+
+</menu>

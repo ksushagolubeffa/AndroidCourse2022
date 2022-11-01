@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\ASUS\\AndroidStudioProjects\\Homework2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_first.xml",
+        "source": "C:\\Users\\ASUS\\AndroidStudioProjects\\Homework2\\app\\src\\main\\res\\layout\\activity_first.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\AndroidStudioProjects\\Homework2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_second.xml",
+        "source": "C:\\Users\\ASUS\\AndroidStudioProjects\\Homework2\\app\\src\\main\\res\\layout\\activity_second.xml"
+    }
+]
