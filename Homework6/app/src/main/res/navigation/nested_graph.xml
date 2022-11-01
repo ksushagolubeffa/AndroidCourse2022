@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_graph"
+    app:startDestination="@id/horoscopeFragment">
+
+    <fragment
+        android:id="@+id/horoscopeFragment"
+        android:name="com.example.homework6.HoroscopeFragment"
+        android:label="HoroscopeFragment"
+        tools:layout="@layout/fragment_horoscope">
+        <action
+            android:id="@+id/action_horoscopeFragment_to_airFragment"
+            app:destination="@id/airFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_horoscopeFragment_to_waterFragment"
+            app:destination="@id/waterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_horoscopeFragment_to_groundFragment"
+            app:destination="@id/groundFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_horoscopeFragment_to_fireFragment"
+            app:destination="@id/fireFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/airFragment"
+        android:name="com.example.homework6.AirFragment"
+        android:label="fragment_air"
+        tools:layout="@layout/fragment_air">
+        <action
+            android:id="@+id/action_airFragment_to_horoscopeFragment"
+            app:destination="@id/horoscopeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fireFragment"
+        android:name="com.example.homework6.FireFragment"
+        android:label="fragment_fire"
+        tools:layout="@layout/fragment_fire" >
+        <action
+            android:id="@+id/action_fireFragment_to_horoscopeFragment"
+            app:destination="@id/horoscopeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/groundFragment"
+        android:name="com.example.homework6.GroundFragment"
+        android:label="fragment_ground"
+        tools:layout="@layout/fragment_ground" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/waterFragment"
+        android:name="com.example.homework6.WaterFragment"
+        android:label="fragment_water"
+        tools:layout="@layout/fragment_water" >
+        <action
+            android:id="@+id/action_waterFragment_to_horoscopeFragment"
+            app:destination="@id/horoscopeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+
+</navigation>
