@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/horoscopeContainerFragment">
+
+    <include app:graph="@navigation/nested_graph" />
+
+    <fragment
+        android:id="@+id/horoscopeContainerFragment"
+        android:name="com.example.homework6.HoroscopeContainerFragment"
+        android:label="fragment_horoscope_container"
+        tools:layout="@layout/fragment_horoscope_container" >
+        <action
+            android:id="@+id/action_horoscopeContainerFragment_to_horoscopeFragment"
+            app:destination="@id/nested_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.homework6.InfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_info"/>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.homework6.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homework6.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.homework6.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+
+</navigation>

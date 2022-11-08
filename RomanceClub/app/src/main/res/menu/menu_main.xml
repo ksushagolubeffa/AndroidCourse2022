@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background = "purple"
+    <item
+        android:id="@+id/mainFragment"
+        android:enabled="true"
+        android:fontFamily="sans-serif-medium"
+        android:icon="@drawable/exit"
+        android:title="Выход" />
+    <item
+        android:id="@+id/downloadedFragment"
+        android:enabled="true"
+        android:fontFamily="sans-serif-medium"
+        android:icon="@drawable/youtube"
+        android:title="Реклама" />
+</menu>
