@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@drawable/first_back_5"
+    tools:context=".FirstActivity">
+
+    <TextView
+        android:id = "@+id/tv_time"
+        android:text = "Выберите время"
+        app:fontFamily="@font/amaranth"
+        android:textColor = "@color/text"
+        android:textSize = "40sp"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id = "@+id/tv_date"
+        android:gravity="center"
+        android:text = "Выберите дату"
+        android:textColor = "@color/text"
+        android:layout_marginBottom="200dp"
+        android:textSize = "40sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id = "@+id/btn_start"
+        android:text = "установить"
+        android:textSize = "25sp"
+        android:layout_marginBottom="30dp"
+        android:textColor = "@color/text"
+        android:backgroundTint="@color/start"
+        app:layout_constraintBottom_toTopOf="@+id/btn_stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"/>
+
+    <Button
+        android:id = "@+id/btn_stop"
+        android:text = "остановить"
+        android:textColor = "@color/text"
+        android:textSize = "25sp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
