@@ -5,39 +5,31 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
-import android.os.MemoryFile
+
 
 import android.provider.MediaStore
 import android.provider.MediaStore.ACTION_PICK_IMAGES
 import androidx.activity.result.contract.ActivityResultContract
+
 import androidx.annotation.RequiresApi
-
-
 import com.example.homework8.MainActivity.Companion.CODE
-import java.io.FileDescriptor
-import java.net.URI
+
 
 
 
 @Suppress("DEPRECATION")
 class MyActivityContract : ActivityResultContract<Intent, Bitmap?>() {
 
+    private var context: Context? = null
+
     @RequiresApi(33)
     @SuppressLint("QueryPermissionsNeeded")
     override fun createIntent(context: Context, input: Intent): Intent {
+        this.context = context
         val mutableList = mutableListOf<Intent>()
 
-        val galIntent = Intent(Intent.ACTION_PICK).apply {
+        val galIntent = Intent(ACTION_PICK_IMAGES).apply {
             type = "image/*"
-        }
-        val imageUri: Uri? = galIntent.data;
-        if(imageUri != null){
-            val bitmap : Bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, Uri.parse(
-                imageUri.toString()
-            ))
-            galIntent.putExtra("data", bitmap)
         }
         mutableList.add(galIntent)
 
@@ -57,8 +49,17 @@ class MyActivityContract : ActivityResultContract<Intent, Bitmap?>() {
     @Suppress("DEPRECATION")
     override fun parseResult(resultCode: Int, intent: Intent?): Bitmap? = when {
         resultCode != Activity.RESULT_OK -> null
-        else -> intent?.getParcelableExtra("data")
-
+        else ->
+            if(intent?.data != null){
+                intent.data?.run {
+                MediaStore.Images.Media.getBitmap(
+                    context?.contentResolver,
+                    this
+                )
+                }
+            }else{
+                intent.takeIf { resultCode == Activity.RESULT_OK }?.getParcelableExtra("data")
+            }
 
     }
 
