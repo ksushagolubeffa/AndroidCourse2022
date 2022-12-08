@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/air"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AirFragment">
+
+
+    <TextView
+        android:id = "@+id/desc_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Воздушные знаки"
+        android:textSize = "50dp"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = " -Близнецы\n\ -Весы\n\ -Водолей"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_a"
+        android:layout_marginTop="50dp"
+        android:textSize = "30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
