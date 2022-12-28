@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/layout"
+        android:icon="@drawable/linear"
+        android:title="LAYOUT"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/theme"
+        android:icon="@drawable/light"
+        android:title="THEME"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/deleteAll"
+        android:icon="@drawable/delete_all"
+        android:title="DELETE"
+        app:showAsAction="always" />
+</menu>
