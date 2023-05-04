@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="light_primary">#DCEDC8</color>-->
+    <color name="light_primary">#B5C89E</color>
+    <color name="primary">#5E7C3C</color>
+    <color name="dark_primary">#689F38</color>
+    <color name="deeply_dark">#83996C</color>
+    <color name="second_dark">#82B654</color>
+    <color name="second_light">#8AA56C</color>
+    <color name="black">#FF000000</color>
+    <color name="add_dt">#353735</color>
+    <color name="add_lt">#F7FBF7</color>
+    <color name="text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--    <color name="light_primary_dt">#A5D7E3</color>-->
+    <color name="light_primary_dt">#4F6A4E</color>
+    <color name="primary_dt">#243C25</color>
+    <color name="dark_primary_dt">#82AA81</color>
+    <color name="second_dark_dt">#1A2B1A</color>
+    <color name="second_light_dt">#305231</color>
+</resources>
